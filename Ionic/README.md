@@ -70,11 +70,11 @@
 │   │       ├── Default@2x~universal~anyany.png
 │   │       └── Default~iphone.png
 │   └── splash.png
-├── src
+├── src		# 项目主要源文件
 │   ├── app
-│   │   ├── app.component.ts
-│   │   ├── app.html
-│   │   ├── app.module.ts
+│   │   ├── app.component.ts	# 定义rootPage，第一个被载入的page，默认是HelloIonicPage,pages表示所有的页面
+│   │   ├── app.html			# app的主模板
+│   │   ├── app.module.ts		# 当前app入口
 │   │   ├── app.scss
 │   │   └── main.ts
 │   ├── assets
@@ -82,11 +82,11 @@
 │   │       └── favicon.ico
 │   ├── index.html
 │   ├── manifest.json
-│   ├── pages
+│   ├── pages					# 一个一个的页面
 │   │   ├── about
-│   │   │   ├── about.html
+│   │   │   ├── about.html		# 模板文件
 │   │   │   ├── about.scss
-│   │   │   └── about.ts
+│   │   │   └── about.ts		# 定义该页面的主类AboutPage
 │   │   ├── contact
 │   │   │   ├── contact.html
 │   │   │   ├── contact.scss
