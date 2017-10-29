@@ -14,8 +14,12 @@
 │   │   ├── __init__.cpython-36.pyc
 │   │   └── hello.cpython-36.pyc
 │   └── hello.py
+├── models
 ├── requirements.txt
+├── static
+├── templates
 ├── tests
-└── urls.py
+├── urls.py
+└── utils
 ```
 
