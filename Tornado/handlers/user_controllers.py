@@ -7,5 +7,5 @@ class UserHandler(tornado.web.RequestHandler):
 
 
 class UserDetailHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.write('user detail')
+    def get(self, user_id):
+        self.write('user id: ' + user_id)
