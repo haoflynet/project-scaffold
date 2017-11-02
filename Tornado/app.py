@@ -1,12 +1,14 @@
 import tornado.httpserver
 import tornado.ioloop
 import tornado.web
+from tornado_sqlalchemy import make_session_factory
 
 from urls import url_patterns
 
 
 def make_app():
-    return tornado.web.Application(url_patterns)
+    factory = make_session_factory('sqlite:///relative_path')
+    return tornado.web.Application(url_patterns, session_factory=factory)
 
 if __name__ == "__main__":
     address = '127.0.0.1'
