@@ -1,15 +1,19 @@
 import tornado.web
-from tornado.gen import coroutine
-from tornado_sqlalchemy import SessionMixin, as_future
 
+import db
 from models.user import User
 
 
-class UserHandler(tornado.web.RequestHandler, SessionMixin):
-    @coroutine
+class UserHandler(tornado.web.RequestHandler):
+    def initialize(self):
+        self.db_session = db.DB_Session()
+
+    def on_finish(self):
+        self.db_session.close()
+
     def get(self):
-        with self.make_session() as session:
-            count = yield as_future(session.query(User).count)
+        user = User.get_username(self.db_session, '')
+        count = self.db_session.query(User).count()
         self.write('{} users so far!'.format(count))
 
 
