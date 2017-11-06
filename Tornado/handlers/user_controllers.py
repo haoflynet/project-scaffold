@@ -1,7 +1,7 @@
 import tornado.web
 
 import db
-from models.user import User
+from models import User
 
 
 class UserHandler(tornado.web.RequestHandler):
