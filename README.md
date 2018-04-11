@@ -2,6 +2,7 @@
 
 initialized project structure for my own technology stack:
 
+- [Chrome_Extension](Chrome_Extension/README.md)
 - [Django](Django/README.md)
 - [Flask](Flask/README.md)
 - [Html](Html/README.md)
