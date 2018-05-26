@@ -1,5 +1,5 @@
 from handlers.hello import HelloHandler
-from handlers.user_controllers import UserHandler, UserDetailHandler
+from handlers.user_handlers import UserHandler, UserDetailHandler
 
 url_patterns = [
     (r"/hello", HelloHandler),

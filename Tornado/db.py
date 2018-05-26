@@ -5,4 +5,6 @@ from settings import constants
 
 engine = create_engine(constants.DB_ENGINE)
 session_factory = sessionmaker(bind=engine)
-DB_Session = scoped_session(session_factory)
+db_session = scoped_session(session_factory)
+
+Base=declarative_base()

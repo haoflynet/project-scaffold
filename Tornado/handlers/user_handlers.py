@@ -1,18 +1,13 @@
+from handlers.base_handler import BaseHandler
+
 import tornado.web
 
-import db
 from models import User
 
 
-class UserHandler(tornado.web.RequestHandler):
-    def initialize(self):
-        self.db_session = db.DB_Session()
-
-    def on_finish(self):
-        self.db_session.close()
-
+class UserHandler(BaseHandler):
     def get(self):
-        user = User.get_username(self.db_session, '')
+        user = User.get_username('')
         count = self.db_session.query(User).count()
         self.write('{} users so far!'.format(count))
 
