@@ -1,20 +1,18 @@
 ## Tornado Project Skeleton
 
 ```shell
-.
+Tornado
 ├── README.md
-├── __pycache__
-│   └── urls.cpython-36.pyc
 ├── app.py
 ├── db.py
-├── handlers
+├── handlers			# controller层
 │   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-36.pyc
-│   │   └── hello.cpython-36.pyc
+│   ├── base_handler.py
 │   ├── hello.py
-│   └── user_controllers.py
-├── models
+│   └── user_handlers.py
+├── managers			# manager层(介于model与controller之间)
+│   └── __init__.py
+├── models				# model层，纯定义model
 │   ├── __init__.py
 │   └── user.py
 ├── requirements.txt
@@ -29,4 +27,3 @@
 └── utils
     └── custom_exceptions.py
 ```
-
