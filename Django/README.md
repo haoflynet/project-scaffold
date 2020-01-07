@@ -8,7 +8,7 @@
 │   ├── urls.py
 │   └── wsgi.py
 ├── README.md
-├── app1
+├── app
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
